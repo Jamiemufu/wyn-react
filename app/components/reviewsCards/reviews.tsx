@@ -5,12 +5,39 @@ import { reviewsContent } from "./reviewsContent.js";
 import ReviewsItem from "./reviewsItem";
 
 export default function Reviews() {
-  const [showAllReviews, setShowAllReviews] = useState(false);
-  const visibleReviews = showAllReviews ? reviewsContent : reviewsContent.slice(0, 3);
-  const buttonText = showAllReviews ? "Show less..." : "Show more...";
 
+  const [showAllReviews, setShowAllReviews] = useState(false);
+  const [opacity, setOpacity] = useState(1);
+  const transitionTime = 300;
+  const buttonText = showAllReviews ? "Show less..." : "Show more...";
+  
+  // If showAllReviews is true, then visibleReviews is the entire reviewsContent array
+  const visibleReviews = showAllReviews ? reviewsContent : reviewsContent.slice(0, 3);
+
+  /**
+   * toggleOpacity is a function that sets the opacity to 1 after a delay of transitionTime
+   * This is a workaround for the fact that the transition property doesn't work with display: none
+   * @returns {void}
+   */
+  const toggleOpacity = () => {
+    setTimeout(() => {
+      setOpacity(1);
+    }, transitionTime);
+  };
+
+  /**
+   * toggleReviews is a function that sets the opacity to 0, then after a delay of transitionTime
+   * it toggles the showAllReviews state variable
+   * This causes the reviews to fade out, then fade back in with the new state
+   * This is a workaround for the fact that the transition property doesn't work with display: none
+   * @returns {void}
+   */
   const toggleReviews = () => {
-    setShowAllReviews(prevState => !prevState);
+    setOpacity(0);
+    setTimeout(() => {
+      toggleOpacity();
+      setShowAllReviews((prevState) => !prevState);
+    }, transitionTime);
   };
 
   return (
@@ -24,7 +51,15 @@ export default function Reviews() {
         obcaecati accusantium esse illum! Numquam id repellendus sequi excepturi
         magni cum error dolores illum.
       </p>
-      <div className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid gap-10 mt-10">
+      <div
+        className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid gap-10 mt-10"
+        style={{
+          transitionProperty: "opacity",
+          transitionTimingFunction: "ease-in-out",
+          transitionDuration: transitionTime + "ms",
+          opacity: opacity,
+        }}
+      >
         {visibleReviews.map((review, index) => (
           <ReviewsItem key={index} review={review} />
         ))}
