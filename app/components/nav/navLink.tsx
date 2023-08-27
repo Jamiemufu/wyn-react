@@ -1,4 +1,4 @@
-export default function navLink({
+export default function NavLink({
   linkTo,
   text,
 }: {

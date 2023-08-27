@@ -1,7 +1,7 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 
-export default function navIconLink({
+export default function NavIconLink({
   image,
   text,
 }: {

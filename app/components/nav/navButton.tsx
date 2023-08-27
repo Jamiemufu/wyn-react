@@ -1,4 +1,4 @@
-export default function navButton() {
+export default function NavButton() {
   return (
     <button className="flex items-center px-3 py-2 border rounded text-brandGray border-brandGray hover:brandOrange hover:border-brandOrange">
       <svg
