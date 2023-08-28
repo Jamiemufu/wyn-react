@@ -14,27 +14,28 @@ export default function ContactInput({
   if (type === "textarea") {
     return (
       <div className="grid row-span-6">
-        <label htmlFor={name} className="capitalize row-span-1">
+        <label htmlFor={name} className="pb-5 sm:pb-0">
           {label} {error && <span className=" text-red-600">{error}</span>}
         </label>
         <textarea
           id={name}
           name={name}
           className={
-            "border rounded border-brandOrange p-1 outline-brandOrange row-span-5" +
+            "border rounded border-brandOrange p-1 outline-brandOrange row-span-5 " +
             (error ? " border-red-600 border-2" : "")
           }
           rows={5}
           cols={50}
           value={name}
           onChange={(e) => stateSet(e.target.value)}
+          placeholder="Enter your message..."
         ></textarea>
       </div>
     );
   } else {
     return (
       <div className="grid row-span-6">
-        <label htmlFor={name} className="capitalize">
+        <label htmlFor={name}>
           {label} {error && <span className=" text-red-600">{error}</span>}
         </label>
         <input
@@ -46,6 +47,7 @@ export default function ContactInput({
             (error ? " border-red-600 border-2" : "")
           }
           value={name}
+          placeholder={"Enter your " + label + "..."}
           onChange={(e) => stateSet(e.target.value)}
         />
       </div>
