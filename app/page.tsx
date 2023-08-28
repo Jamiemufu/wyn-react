@@ -9,8 +9,8 @@ export default function Home() {
     <main className='bg-white'>
       <Hero />
       <Regulated />
-      <ReviewCards />
       <Contact />
+      <ReviewCards />
     </main>
   )
 }
