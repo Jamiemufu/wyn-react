@@ -1,3 +1,4 @@
+import Link from "next/link";
 import NavLogo from "./navLogo";
 import NavLink from "./navLink";
 import NavIconLink from "./navIconLink";
@@ -11,11 +12,13 @@ export default function nav() {
         <div>
           <NavLogo />
         </div>
-        <div className="flex flex-wrap justify-center p-5 sm:p-6 sm:flex-row">
-          <NavIconLink image="/email-50.png" text="Email Us" />
-          <NavIconLink image="/phone-50.png" text="07858382831" />
+        <div className="flex flex-wrap justify-center p-5 sm:p-2 sm:flex-row">
+          <NavIconLink image="/gmail-96.png" text="Email Us" />
+          <NavIconLink image="/whatsapp-96.png" text="07858382831" />
           <div className="hidden sm:flex">
-            <Button text="Get Quote!"/>
+            <Link href="#contact">
+              <Button text="Get Quote!" />
+            </Link>
           </div>
         </div>
       </div>

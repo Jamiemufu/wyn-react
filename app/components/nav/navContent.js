@@ -16,7 +16,7 @@ export const navLinks = [
       text: "FAQ",
     },
     {
-      linkTo: "#",
+      linkTo: "#contact",
       text: "Contact",
     },
   ];

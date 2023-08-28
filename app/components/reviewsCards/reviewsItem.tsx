@@ -10,8 +10,8 @@ export default function ReviewsItem({
       <div className="grid auto-rows-auto p-3">
         <Image
           src="/quote-open-50.png"
-          height={30}
-          width={30}
+          height={20}
+          width={20}
           alt={review.name}
           className="justify-self-start self-center"
         />
@@ -20,8 +20,8 @@ export default function ReviewsItem({
         </p>
         <Image
           src="/quote-close-50.png"
-          height={30}
-          width={30}
+          height={20}
+          width={20}
           alt={review.name}
           className=" justify-self-end self-center"
         />
@@ -34,8 +34,8 @@ export default function ReviewsItem({
               key={i}
               src="/rating-90.png"
               alt="star"
-              width={20}
-              height={20}
+              width={25}
+              height={25}
             />
           );
         })}
