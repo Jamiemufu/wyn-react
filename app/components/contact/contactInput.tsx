@@ -1,15 +1,17 @@
 export default function ContactInput({
   label,
   name,
-  stateSet,
   error,
   type,
+  validate,
+  value,
 }: {
   label: string;
   name: string;
-  stateSet: (name: string) => void;
   error: string;
   type: string;
+  value: string;
+  validate: (value: any, name: string) => void;
 }) {
   if (type === "textarea") {
     return (
@@ -22,13 +24,14 @@ export default function ContactInput({
           name={name}
           className={
             "border rounded border-brandOrange p-1 outline-brandOrange row-span-5 " +
-            (error ? " border-red-600 border-2" : "")
+            (error ? " border-red-600 border-2 focus:outline-red-600" : "")
           }
           rows={5}
           cols={50}
-          value={name}
-          onChange={(e) => stateSet(e.target.value)}
+          value={value}
+          onChange={(e) => validate(e.target.value, name)}
           placeholder="Enter your message..."
+          
         ></textarea>
       </div>
     );
@@ -44,11 +47,11 @@ export default function ContactInput({
           name={name}
           className={
             "border rounded border-brandOrange p-1 outline-brandOrange" +
-            (error ? " border-red-600 border-2" : "")
+            (error ? " border-red-600 border-2 focus:outline-red-600" : "")
           }
-          value={name}
+          value={value}
           placeholder={"Enter your " + label + "..."}
-          onChange={(e) => stateSet(e.target.value)}
+          onChange={(e) => validate(e.target.value, name)}
         />
       </div>
     );

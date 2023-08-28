@@ -4,13 +4,11 @@ import { useEffect, useState } from "react";
 import ContactInput from "./contactInput";
 
 export default function ContactForm() {
-  //TODO: Add form validation onChange rather than submit
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
-  const [disabled, setDisabled] = useState(false);
   const [errors, setErrors] = useState({
     name: "",
     email: "",
@@ -18,28 +16,73 @@ export default function ContactForm() {
     message: "",
   });
 
-  const validateForm = () => {
-    const newErrors = {
-      name: name ? "" : "Please enter a valid name",
-      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-        ? ""
-        : "Please enter a valid email address",
-      number: number ? "" : "Please enter a valid phone number",
-      message: message ? "" : "Message/enquiry cannot be empty",
-    };
-    setErrors(newErrors);
-    // return true if there are no errors
-    setDisabled(Object.values(newErrors).some((err) => err));
-    return Object.values(newErrors).every((err) => !err);
+  const setNameError = (value: string) => {
+    setName(value);
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      name: value === "" || value.length < 3 ? "Please enter a valid name" : "",
+    }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!validateForm()) {
-      setDisabled(true);
-      // update this to send the form data to the backend
-      console.log(name.trim(), email.trim(), number.trim(), message.trim());
+  const setEmailError = (value: string) => {
+    setEmail(value);
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) === false || value === "" ? "Please enter a valid email address" : "",
+    }));
+  };
+
+  const setNumberError = (value: string) => {
+    setNumber(value);
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      number: value === "" || value.length < 6 ? "Please enter a valid phone number" : "",
+    }));
+  };
+
+  const setMessageError = (value: string) => {
+    setMessage(value);
+   setErrors((prevErrors) => ({
+      ...prevErrors,
+      message: value === "" || value.length < 10 ? ("Please enter a valid message") : "",
+    }));
+  };
+
+  // validate field on change
+  const validateField = (value: any, inputName: string) => {
+    switch (inputName) {
+      case "name":
+        setNameError(value);
+        break;
+      case "email":
+        setEmailError(value);
+        break;
+      case "number":
+        setNumberError(value);
+        break;
+      case "message":
+        setMessageError(value);
+        break;
     }
+  };
+  
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    // validate all fields
+    validateField(name, "name");
+    validateField(email, "email");
+    validateField(number, "number");
+    validateField(message, "message");
+    
+    // if all fields are valid, submit form
+    if (Object.values(errors).every((err) => err !== "")) {
+      console.log("form submitted");
+    } else {
+      console.log("form invalid");
+    }
+
   };
 
   return (
@@ -49,38 +92,41 @@ export default function ContactForm() {
     >
       <div className="grid grid-rows-6 gap-5">
         <ContactInput
-          label="Name"
-          name={name}
-          stateSet={setName}
+          label="Name:"
+          name="name"
+          validate={validateField}
           error={errors.name}
           type="text"
+          value={name}
         />
         <ContactInput
-          label="Email Address"
-          name={email}
-          stateSet={setEmail}
+          label="Email Address:"
+          name="email"
+          validate={validateField}
           error={errors.email}
           type="email"
+          value={email}
         />
         <ContactInput
-          label="Phone Number"
-          name={number}
-          stateSet={setNumber}
+          label="Phone Number:"
+          name="number"
+          validate={validateField}
           error={errors.number}
           type="number"
+          value={number}
         />
       </div>
       <div className="grid grid-rows-6 gap-5">
         <ContactInput
-          label="Message"
-          name={message}
-          stateSet={setMessage}
+          label="Message:"
+          name="message"
+          validate={validateField}
           error={errors.message}
           type="textarea"
+          value={message}
         />
         <button
           className="bg-brandOrange rounded p-4 text-white sm:mb-0 row-span-1 disabled:bg-brandGray"
-          disabled={disabled}
         >
           <p>Submit</p>
         </button>
