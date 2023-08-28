@@ -87,8 +87,9 @@ export default function ContactForm() {
 
   return (
     <form
-      className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10"
+      className="grid grid-cols-1 sm:grid-cols-2 gap-5 py-5"
       onSubmit={handleSubmit}
+      id="contactForm"
     >
       <div className="grid grid-rows-6 gap-5">
         <ContactInput
