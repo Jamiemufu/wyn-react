@@ -11,7 +11,7 @@ export default function NavLink({
 }) {
   return (
     <li>
-      <Link href={linkTo} onClick={onClick} className=" text-black">
+      <Link href={linkTo} onClick={onClick}>
         {text}
       </Link>
     </li>

@@ -1,22 +1,23 @@
 export const navLinks = [
     {
-      linkTo: "#",
+      linkTo: "/",
       text: "Home",
     },
     {
-      linkTo: "#",
+      linkTo: "#services",
       text: "Services",
-    },
-    {
-      linkTo: "#",
-      text: "Reviews",
-    },
-    {
-      linkTo: "#",
-      text: "FAQ",
     },
     {
       linkTo: "#contact",
       text: "Contact",
     },
+    {
+      linkTo: "#reviews",
+      text: "Reviews",
+    },
+    {
+      linkTo: "#faq",
+      text: "FAQ",
+    },
+    
   ];

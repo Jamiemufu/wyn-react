@@ -33,6 +33,10 @@ export default function Faq() {
     },
   ];
 
+  /**
+   * handleAccordionClick is a function that sets the activeIndex state variable to the index of the accordion that was clicked
+   * @param index 
+   */
   const handleAccordionClick = (index: number) => {
     if (activeIndex === index) {
       setActiveIndex(null);

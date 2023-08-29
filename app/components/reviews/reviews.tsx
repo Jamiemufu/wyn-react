@@ -41,7 +41,8 @@ export default function Reviews() {
   };
 
   return (
-    <section className="text-black flex flex-col px-5 py-4 max-w-6xl m-auto">
+    <section className="text-black flex flex-col px-5 py-4 max-w-6xl m-auto"
+    id="reviews">
       <h2 className="text-4xl font-bold text-left py-5">
         What customers say...
       </h2>

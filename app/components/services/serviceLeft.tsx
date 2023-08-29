@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Regulated from "../regulated/regulated";
 
-export default function IntroPartLeft({
+export default function serviceLeft({
   image,
   title,
   text,
