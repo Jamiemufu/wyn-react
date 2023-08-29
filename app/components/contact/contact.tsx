@@ -3,7 +3,7 @@ import SocialContacts from "./socialContacts";
 
 export default function Contact() {
   return (
-    <section className="text-black flex flex-col p-5 pt-0 max-w-6xl m-auto" id="contact">
+    <section className="text-black flex flex-col px-5 py-4 max-w-6xl m-auto" id="contact">
       <h2 className="text-4xl font-bold text-left sm:text-4xl py-5">
         Contact Us
       </h2>

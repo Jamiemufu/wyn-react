@@ -17,14 +17,14 @@ export default function ContactInput({
     return (
       <div className="grid row-span-6">
         <label htmlFor={name} className="pb-5 sm:pb-0">
-          {label} {error && <span className=" text-red-600">{error}</span>}
+          {label} {error && <span className=" text-red-600 text-sm">{error}</span>}
         </label>
         <textarea
           id={name}
           name={name}
           className={
             "border rounded border-brandOrange p-1 outline-brandOrange row-span-5 " +
-            (error ? " border-red-600 border-2 focus:outline-red-600" : "")
+            (error ? " border-red-600 border-2 focus:outline-red-600 text-sm" : "")
           }
           rows={5}
           cols={50}
@@ -39,7 +39,7 @@ export default function ContactInput({
     return (
       <div className="grid row-span-6">
         <label htmlFor={name}>
-          {label} {error && <span className=" text-red-600">{error}</span>}
+          {label} {error && <span className=" text-red-600 text-sm">{error}</span>}
         </label>
         <input
           type={type}

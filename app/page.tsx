@@ -3,12 +3,13 @@ import Regulated from './components/regulated/regulated'
 import Hero from './components/hero/hero'
 import ReviewCards from './components/reviewsCards/reviews'
 import Contact from './components/contact/contact'
+import Intro from './components/intro/intro'
 
 export default function Home() {
   return (
     <main className='bg-white'>
       <Hero />
-      <Regulated />
+      <Intro />
       <Contact />
       <ReviewCards />
     </main>
