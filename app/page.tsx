@@ -4,6 +4,7 @@ import Hero from './components/hero/hero'
 import ReviewCards from './components/reviewsCards/reviews'
 import Contact from './components/contact/contact'
 import Intro from './components/intro/intro'
+import Faq from './components/faq/faq'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Intro />
       <Contact />
       <ReviewCards />
+      <Faq />
     </main>
   )
 }
