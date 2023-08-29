@@ -22,8 +22,8 @@ export default function Hero() {
             aliquam cupiditate possimus consectetur dolor cumque ipsam.
           </p>
           <div className="py-10 text-center sm:self-center">
-            <Link href="#contact">
-              <Button text="Get a Free Quote!" />
+            <Link href="#contact" >
+                <Button text="Get a Free Quote!" />
             </Link>
           </div>
         </div>

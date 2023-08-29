@@ -1,5 +1,4 @@
 import { navLinks } from "./nav/navContent";
-import NavLink from "./nav/navLink";
 import Link from "next/link";
 import Button from "./button";
 
@@ -11,17 +10,16 @@ export default function Modal({ show, close }: { show: boolean; close: any }) {
           X
         </button>
       </div>
-      <ul className="flex flex-col justify-center align-middle items-center text-4xl gap-10 h-4/5">
+      <ul className="flex flex-col justify-center align-middle items-center text-4xl gap-10 h-4/5 text-black">
         {navLinks.map((link, index) => (
-          <NavLink
-            key={index}
-            linkTo={link.linkTo}
-            text={link.text}
-            onClick={close}
-          />
+          <li key={index} onClick={close}>
+            <Link href={link.linkTo} >
+              {link.text}
+            </Link>
+          </li>
         ))}
-        <Link href="#contact" onClick={close}>
-          <Button text="Get Quote!" />
+        <Link href="#contact" scroll={false} >
+          <Button text="Get Quote!" close={close} />
         </Link>
       </ul>
     </div>

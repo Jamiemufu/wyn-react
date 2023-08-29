@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import NavLogo from "./navLogo";
-import NavLink from "./navLink";
 import Button from "../button";
 import { navLinks } from "./navContent.js";
 import NavButton from "./navButton";
@@ -16,14 +15,14 @@ export default function Nav() {
    * showModal is a function that sets the modalOpen state variable to true
    * It also disables scrolling on the background
    * @returns {void}
-   * 
+   *
    */
   const showModal = () => {
     setModalOpen(true);
     // Disables Background Scrolling whilst the SideDrawer/Modal is open
-    if (typeof window != 'undefined' && window.document) {
-      document.body.style.overflow = 'hidden';
-  }
+    if (typeof window != "undefined" && window.document) {
+      document.body.style.overflow = "hidden";
+    }
   };
 
   /**
@@ -33,8 +32,8 @@ export default function Nav() {
    */
   const hideModal = () => {
     setModalOpen(false);
-    if (typeof window != 'undefined' && window.document) {
-      document.body.style.overflow = 'unset';
+    if (typeof window != "undefined" && window.document) {
+      document.body.style.overflow = "unset";
     }
   };
 
@@ -49,7 +48,11 @@ export default function Nav() {
         <div className="sm:flex sm:flex-wrap justify-center p-5 sm:p-2 sm:flex-row hidden">
           <ul className="grid grid-flow-col self-center gap-10 items-center text-black">
             {navLinks.map((link, index) => (
-              <NavLink key={index} linkTo={link.linkTo} text={link.text} />
+              <li key={index}>
+                <Link href={link.linkTo} >
+                  {link.text}
+                </Link>
+              </li>
             ))}
             <Link href="#contact">
               <Button text="Get Quote!" />

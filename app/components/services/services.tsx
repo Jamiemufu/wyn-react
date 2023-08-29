@@ -8,7 +8,7 @@ export default function Services() {
       id="services"
     >
       <ServiceRight
-        image="/wyn.jpg"
+        image="/Wyn.jpg"
         title="Lorem ipsum dolor sit amet"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rerum
             explicabo qui? Magni hic reiciendis eum quia dolorum cupiditate
@@ -73,7 +73,7 @@ export default function Services() {
         regulated={false}
       />
        <ServiceLeft
-        image="/wyn.jpg"
+        image="/Wyn.jpg"
         title="Lorem ipsum dolor sit amet"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rerum
             explicabo qui? Magni hic reiciendis eum quia dolorum cupiditate

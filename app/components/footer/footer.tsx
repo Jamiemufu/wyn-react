@@ -1,5 +1,4 @@
 import { navLinks } from "../nav/navContent";
-import NavLink from "../nav/navLink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -65,13 +64,20 @@ export default function Footer() {
           <h2 className="font-bold py-5">Site Links</h2>
           <ul className="text-white">
             {navLinks.map((link, index) => (
-              <NavLink key={index} linkTo={link.linkTo} text={link.text} />
+              <li key={index}>
+                <Link href={link.linkTo} >
+                  {link.text}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
       </div>
-      <div className="flex flex-row max-w-6xl m-auto p-5 text-sm" >
-        <p>All Rights Reserved Wyn Edwards Electrical &copy; Website designed and created by Jamie Evans</p>
+      <div className="flex flex-row max-w-6xl m-auto p-5 text-sm">
+        <p>
+          All Rights Reserved Wyn Edwards Electrical &copy; Website designed and
+          created by Jamie Evans
+        </p>
         <p></p>
       </div>
     </footer>

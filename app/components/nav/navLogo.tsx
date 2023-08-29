@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function NavLogo() {
   return (
     <div className="flex items-center flex-shrink-0 text-grey mr-6">
-      <Link href="/">
+      <Link href="/" >
         <Image
           src={"/wynpng.png"}
           height={275}
