@@ -59,11 +59,11 @@ export default function Faq() {
       {faqData.map((faq, index) => (
         <div key={index} className="mb-5">
           <div
-            className="text-brandOrange text-lg sm:text-2xl font-bold text-left py-2 pr-4 cursor-pointer flex justify-between items-center align-top"
+            className="text-brandOrange text-lg sm:text-2xl font-bold text-left py-2 cursor-pointer flex justify-between items-center align-top"
             onClick={() => handleAccordionClick(index)}
           >
             {faq.question}
-            <span className="text-brandOrange text-2xl sm:text-4xl self-start leading-none">{activeIndex === index ? "-" : "+"}</span>
+            <span className="text-brandOrange text-2xl sm:text-4xl self-start leading-none pl-5">{activeIndex === index ? "-" : "+"}</span>
           </div>
           {activeIndex === index && <p>{faq.answer}</p>}
         </div>
