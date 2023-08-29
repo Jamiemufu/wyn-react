@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Regulated from "../regulated/regulated";
 import IntroPartRight from "./introPartRight";
 import IntroPartLeft from "./introPartLeft";
 
@@ -7,7 +5,6 @@ export default function Intro() {
   return (
     <section
       className="text-black grid px-5 py-4 max-w-6xl m-auto"
-      id="contact"
     >
       <IntroPartRight
         image="/wyn.jpg"

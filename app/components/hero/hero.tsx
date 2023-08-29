@@ -16,7 +16,7 @@ export default function Hero() {
             at magni accusantium dolorum, ipsam quam ea et fugiat error sunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit voluptatum commodi blanditiis! Voluptate ad dignissimos maiores itaque. Voluptatibus officiis molestias quae, minus, consequuntur aliquam cupiditate possimus consectetur dolor cumque ipsam.
           </p>
           <div className="py-10 text-center sm:self-center">
-            <Link href="#contactForm">
+            <Link href="#contact">
               <Button text="Get a Free Quote!" />
             </Link>
           </div>

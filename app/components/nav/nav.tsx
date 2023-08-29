@@ -9,7 +9,7 @@ import { navLinks } from "./navContent.js";
 import NavButton from "./navButton";
 import Modal from "../modal";
 
-export default function nav() {
+export default function Nav() {
   const [modalOpen, setModalOpen] = useState(false);
 
   const showModal = () => {
