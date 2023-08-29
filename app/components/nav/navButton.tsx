@@ -1,7 +1,9 @@
-export default function NavButton(props: {onClick: () => void}){
+export default function NavButton(props: { onClick: () => void }) {
   return (
-    <button className="flex items-center px-3 py-2 border rounded text-brandGray border-brandGray hover:brandOrange hover:border-brandOrange"
-    onClick={props.onClick}>
+    <button
+      className="flex items-center px-3 py-2 border rounded text-brandGray border-brandGray hover:brandOrange hover:border-brandOrange"
+      onClick={props.onClick}
+    >
       <svg
         className="fill-current h-3 w-3"
         viewBox="0 0 20 20"

@@ -1,15 +1,19 @@
+import Link from "next/link";
+
 export default function NavLink({
   linkTo,
   text,
+  onClick,
 }: {
   linkTo: string;
   text: string;
+  onClick?: () => void;
 }) {
   return (
     <li>
-      <a href={linkTo} className=" text-black">
+      <Link href={linkTo} onClick={onClick} className=" text-black">
         {text}
-      </a>
+      </Link>
     </li>
   );
 }
