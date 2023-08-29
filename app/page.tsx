@@ -7,7 +7,7 @@ import Intro from './components/intro/intro'
 
 export default function Home() {
   return (
-    <main className='bg-white'>
+    <main className='bg-white md:pt-24 sm:pt-36 pt-24'>
       <Hero />
       <Intro />
       <Contact />

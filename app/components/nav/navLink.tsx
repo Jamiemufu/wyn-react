@@ -6,8 +6,8 @@ export default function NavLink({
   text: string;
 }) {
   return (
-    <li className="block mt-4 sm:inline-block sm:mt-0 mr-10">
-      <a href={linkTo} className=" text-white">
+    <li>
+      <a href={linkTo} className=" text-black">
         {text}
       </a>
     </li>
