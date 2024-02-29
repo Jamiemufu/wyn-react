@@ -24,13 +24,13 @@ export default function ContactInput({
           name={name}
           className={
             "border rounded border-brandOrange p-1 outline-brandOrange row-span-5 " +
-            (error ? " border-red-600 border-2 focus:outline-red-600 text-sm" : "")
+            (error ? " border-red-600 border-2 focus:outline-red-600" : "")
           }
           rows={5}
           cols={50}
           value={value}
           onChange={(e) => validate(e.target.value, name)}
-          placeholder="Enter your message..."
+          placeholder="Message:"
           
         ></textarea>
       </div>
@@ -50,7 +50,7 @@ export default function ContactInput({
             (error ? " border-red-600 border-2 focus:outline-red-600" : "")
           }
           value={value}
-          placeholder={"Enter your " + label + "..."}
+          placeholder={label}
           onChange={(e) => validate(e.target.value, name)}
         />
       </div>

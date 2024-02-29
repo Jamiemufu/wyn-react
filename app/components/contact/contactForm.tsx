@@ -128,6 +128,7 @@ export default function ContactForm() {
         />
         <button
           className="bg-brandOrange rounded p-4 text-white sm:mb-0 row-span-1 disabled:bg-brandGray"
+          disabled={Object.values(errors).some((err) => err !== "")}
         >
           <p>Submit</p>
         </button>
