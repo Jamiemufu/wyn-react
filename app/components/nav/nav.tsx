@@ -46,7 +46,7 @@ export default function Nav() {
         </div>
         {/* open menu */}
         <div className="sm:flex sm:flex-wrap justify-center p-5 sm:p-2 sm:flex-row hidden">
-          <ul className="grid grid-flow-col self-center gap-10 items-center text-black">
+          <ul className="grid grid-flow-col self-center gap-10 items-center text-brandOrange font-semibold text-base font-sans">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <Link href={link.linkTo} >

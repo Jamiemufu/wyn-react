@@ -8,7 +8,7 @@ export default function Hero() {
     >
       <div className="h-full text-white bg-black bg-opacity-70">
         <div className="flex flex-col h-full m-auto p-5 py-20 max-w-6xl">
-          <h1 className="text-4xl py-7 text-left font-bold sm:text-6xl">
+          <h1 className="text-4xl py-7 text-left font-bold sm:text-6xl pt-24 sm:pt-0">
             Wyn Edwards Electrical
           </h1>
           <p className="text-l w-full text-left">

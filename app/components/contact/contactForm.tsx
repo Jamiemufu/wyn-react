@@ -84,6 +84,18 @@ export default function ContactForm() {
     }
 
   };
+  
+  // if all fields are empty, set errors to empty
+  useEffect(() => {
+    if (name === "" && email === "" && number === "" && message === "") {
+      setErrors({
+        name: "",
+        email: "",
+        number: "",
+        message: "",
+      });
+    }
+  }, [name, email, number, message]);
 
   return (
     <form

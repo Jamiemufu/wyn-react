@@ -13,9 +13,9 @@ export default function serviceLeft({
   regulated: boolean;
 }) {
   return (
-    <div className={"flex flex-col justify-center sm:grid sm:grid-cols-6 gap-5"}>
-      <div className="grid sm:col-span-4 self-center justify-around py-5">
-        <h2 className="text-4xl font-bold py-5">{title}</h2>
+    <div className={"flex flex-col justify-center sm:grid sm:grid-cols-6 gap-12 py-12"}>
+      <div className="grid sm:col-span-4 self-start justify-end">
+        <h2 className="text-4xl font-bold pb-5">{title}</h2>
         <p>{text}</p>
         {regulated && <Regulated />}
       </div>
@@ -25,7 +25,7 @@ export default function serviceLeft({
         height={400}
         alt={title}
         className={
-          "w-full col-span-2 rounded-lg self-center justify-self-center sm:self-auto "
+          "w-full col-span-2 rounded-lg self-center justify-self-center sm:self-auto"
         }
       />
     </div>

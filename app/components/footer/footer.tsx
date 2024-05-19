@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-brandOrange w-full ">
+    <footer className="bg-brandOrange w-full">
       <div className="text-white grid grid-cols-1 sm:grid-cols-3 gap-10 px-5 py-8 max-w-6xl m-auto sm:justify-items-center">
         {/* col - 1 */}
         <div>

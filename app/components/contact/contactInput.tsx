@@ -38,7 +38,7 @@ export default function ContactInput({
   } else {
     return (
       <div className="grid row-span-6">
-        <label htmlFor={name}>
+        <label htmlFor={name} className="p-0 m-0">
           {label} {error && <span className=" text-red-600 text-sm">{error}</span>}
         </label>
         <input

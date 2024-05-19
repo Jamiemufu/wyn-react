@@ -18,7 +18,7 @@ export default function Services() {
             dolore sed voluptatum at reprehenderit id voluptatibus cupiditate
             neque minus accusantium dolor, rerum optio veniam consequatur
             fugiat!"
-        regulated={true}
+        regulated={false}
       />
       <ServiceLeft
         image="/fault.jpg"

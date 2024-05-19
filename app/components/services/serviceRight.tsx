@@ -15,7 +15,7 @@ export default function IntroPartRight({
   return (
     <div
       className={
-        "flex flex-col-reverse justify-center sm:grid sm:grid-cols-6 gap-5 py-5"
+        "flex flex-col-reverse justify-center sm:grid sm:grid-cols-6 gap-12 py-12"
       }
     >
       <Image
@@ -24,11 +24,11 @@ export default function IntroPartRight({
         height={400}
         alt={title}
         className={
-          " w-full col-span-2 rounded-lg self-center justify-self-center sm:self-auto "
+          " w-full col-span-2 rounded-lg self-center justify-self-center sm:self-auto"
         }
       />
-      <div className="flex flex-col justify-center py-5 sm:grid sm:col-span-4 self-center sm:justify-around">
-        <h2 className="text-4xl font-bold py-5">{title}</h2>
+      <div className="flex flex-col justify-center sm:grid sm:col-span-4 self-start sm:justify-around">
+        <h2 className="text-4xl font-bold pb-5">{title}</h2>
         <p>{text}</p>
         {regulated && <Regulated />}
       </div>
