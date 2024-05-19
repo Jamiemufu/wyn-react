@@ -1,5 +1,6 @@
 import Nav from './components/nav/nav'
 import Regulated from './components/regulated/regulated'
+import Service from './components/service/service'
 import Hero from './components/hero/hero'
 import ReviewCards from './components/reviews/reviews'
 import Contact from './components/contact/contact'
@@ -12,7 +13,7 @@ export default function Home() {
     <main className='bg-white md:pt-24 sm:pt-36'>
       <Hero />
       <Regulated />
-      <Intro />
+      <Service />
       <Contact />
       <ReviewCards />
       <Faq />
