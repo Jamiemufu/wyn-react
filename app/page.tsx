@@ -4,7 +4,6 @@ import Service from './components/service/service'
 import Hero from './components/hero/hero'
 import ReviewCards from './components/reviews/reviews'
 import Contact from './components/contact/contact'
-import Intro from './components/services/services'
 import Faq from './components/faq/faq'
 import Footer from './components/footer/footer'
 

@@ -75,8 +75,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-row max-w-6xl m-auto p-5 text-sm">
         <p>
-          All Rights Reserved Wyn Edwards Electrical &copy; Website designed and
-          created by Jamie Evans
+          All Rights Reserved Wyn Edwards Electrical &copy; Website by JEDev
         </p>
         <p></p>
       </div>
