@@ -1,7 +1,6 @@
 import { navLinks } from "./nav/navContent";
 import Link from "next/link";
 import Button from "./button";
-import NavLogo from "./nav/navLogo";
 
 export default function Modal({ show, close }: { show: boolean; close: any }) {
   return (

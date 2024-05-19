@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import Nav from "./components/nav/nav";
+import Footer from "./components/footer/footer";
 
 export const metadata: Metadata = {
   title: "Wyn Edwards Electrical",
@@ -27,7 +28,7 @@ export default function RootLayout({
         </header>
         <main>{children}</main>
         <footer>
-          {/* some footer */}
+         <Footer/>
         </footer>
       </body>
     </html>
