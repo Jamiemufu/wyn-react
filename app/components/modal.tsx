@@ -23,9 +23,6 @@ export default function Modal({ show, close }: { show: boolean; close: any }) {
       </div>
 
       <ul className="flex flex-col justify-center align-middle items-center text-lg sm:text-4xl gap-10 h-4/5 text-brandOrange">
-        <li className="ml-5">
-          <NavLogo />
-        </li>
         {navLinks.map((link, index) => (
           <li key={index} onClick={close}>
             <Link href={link.linkTo}>{link.text}</Link>
